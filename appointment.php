@@ -71,19 +71,14 @@
                   <input type="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="form-group">
-                  <input type="tel" name="phone" placeholder="Phone" required>
+                  <input type="tel" name="phone" placeholder="Phone" required pattern="[0-9]{10,15}">
                 </div>
               </div>
-
-              <!-- 📅 Date, City, Doctor -->
-              <div class="col-md-6 col-sm-12 col-xs-12">
-                <div class="form-group">
-                  <input type="date" name="appointment_date" placeholder="Date" required>
-                </div>
+              
 
                 <!-- 🌆 City Dropdown -->
                 <div class="form-group">
-                  <select name="city" required>
+                  <select name="city" id="citySelect" required>
                     <option value="">Select City</option>
                     <?php
                     include "db.php";
@@ -96,36 +91,49 @@
                 </div>
 
                 <!-- 👨‍⚕️ Doctor Dropdown -->
-                <div class="form-group">
-                  <select name="doctor_id" required>
-                    <option value="">Select Doctor</option>
-                    <?php
-                    $doctors = mysqli_query($conn, "SELECT * FROM Doctors");
-                    while ($doc = mysqli_fetch_assoc($doctors)) {
-                      echo "<option value='{$doc['doctor_id']}'>{$doc['doctor_name']}</option>";
-                    }
-                    ?>
-                  </select>
-                </div>
-              </div>
+                <!-- 👨‍⚕️ Doctor Dropdown -->
+
+<script>
+document.getElementById("citySelect").addEventListener("change", function () {
+    var cityId = this.value;
+
+    // Reset doctor & time dropdowns
+    document.getElementById("doctorSelect").innerHTML = "<option value=''>Loading doctors...</option>";
+    document.getElementById("timeSlot").innerHTML = "<option value=''>Select Time Slot</option>";
+
+    // AJAX request to get doctors by city
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "get_doctors.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    xhr.onload = function () {
+        if (this.status == 200) {
+            document.getElementById("doctorSelect").innerHTML = this.responseText;
+        }
+    };
+
+    xhr.send("city_id=" + cityId);
+});
+</script>
+
+<!-- DOCTOR DROPDOWN -->
+<div class="form-group">
+  <select name="doctor_id" id="doctorSelect" required>
+    <option value="">Select Doctor</option>
+  </select>
+</div>
+
 
               <!-- 🕐 Time Slot & Message -->
               <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="form-group">
-                  <select name="time_slot" required>
-                    <option value="">Select Time Slot</option>
-                    <?php
-                    $slots = mysqli_query($conn, "SELECT DISTINCT time_slot FROM DoctorAvailability");
-                    while ($slot = mysqli_fetch_assoc($slots)) {
-                      echo "<option value='{$slot['time_slot']}'>{$slot['time_slot']}</option>";
-                    }
-                    ?>
-                  </select>
-                </div>
+                <!-- 🕐 Time Slot Dropdown -->
+<div class="form-group">
+  <select name="time_slot" id="timeSlot" required>
+    <option value="">Select Time Slot</option>
+    <!-- Will be filled by JS -->
+  </select>
+</div>
 
-                <div class="form-group">
-                  <textarea name="message" placeholder="Your Message" required></textarea>
-                </div>
 
                 <div class="form-group text-center">
                   <button type="submit" name="submitbtn" class="btn-style-one">Submit Now</button>
@@ -141,7 +149,7 @@
       <div class="col-md-6 col-sm-12 col-xs-12">
         <div class="appointment-image-holder">
           <figure>
-            <img src="images/background/appoinment.jpg" alt="Appointment">
+            <img src="images/app.jpg" alt="Appointment" height="500px">
           </figure>
         </div>
       </div>
@@ -195,20 +203,43 @@
     </div>
 </section>
 <!--End team section-->
-<?php include ("footer.php");?>
+
+
 
 </div>
+<script>
+document.getElementById("doctorSelect").addEventListener("change", function() {
+    var doctorId = this.value;
+
+    // Clear existing options
+    document.getElementById("timeSlot").innerHTML = "<option value=''>Loading...</option>";
+
+    // Send AJAX request
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "get_slots.php", true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    xhr.onload = function () {
+        if (this.status == 200) {
+            document.getElementById("timeSlot").innerHTML = this.responseText;
+        }
+    };
+
+    xhr.send("doctor_id=" + doctorId);
+});
+</script>
+
 <!--End pagewrapper-->
 
-
+<?php include "footer.php"; 
+?>
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target=".header-top">
   <span class="icon fa fa-angle-up"></span>
 </div>
-
 <script src="plugins/jquery.js"></script>
-<script src="plugins/bootstrap.min.js"></script>
 <script src="plugins/bootstrap-select.min.js"></script>
+<script src="plugins/bootstrap.min.js"></script>
 <!-- Slick Slider -->
 <script src="plugins/slick/slick.min.js"></script>
 <!-- FancyBox -->
@@ -222,6 +253,7 @@
 <script src="plugins/jquery-ui.js"></script>
 <script src="plugins/timePicker.js"></script>
 <script src="js/script.js"></script>
+
 </body>
 
 </html>
