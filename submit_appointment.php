@@ -45,17 +45,17 @@ if (isset($_POST['submitbtn'])) {
 
     // 3. Extract date from time slot
 // 3. Extract date from time slot using regex
-$appointment_date = '';
-if (preg_match('/\d{4}-\d{2}-\d{2}/', $time_slot, $matches)) {
-    $appointment_date = $matches[0];
-}
+// 3. Use full date and time directly
+$appointment_datetime = $time_slot;
+
 
     $status = "Pending";
     $booked_on = date("Y-m-d H:i:s");
 
     // 4. Insert into Appointments
-    $stmt = $conn->prepare("INSERT INTO Appointments (patient_id, doctor_id, appointment_date, status, booked_on) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("iisss", $patient_id, $doctor_id, $appointment_date, $status, $booked_on);
+   $stmt = $conn->prepare("INSERT INTO Appointments (patient_id, doctor_id, appointment_datetime, status, booked_on) VALUES (?, ?, ?, ?, ?)");
+$stmt->bind_param("iisss", $patient_id, $doctor_id, $appointment_datetime, $status, $booked_on);
+
 
     if ($stmt->execute()) {
         echo "<script>alert('Appointment booked successfully!'); window.location.href = 'index.php';</script>";
