@@ -90,7 +90,7 @@
       <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                  <a class="navbar-brand" href="index.html">
+                  <a class="navbar-brand" href="index.php">
     <img src="logo.png" alt="YouCARE Logo" style="height: 50px;">
   </a>
                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
@@ -117,7 +117,7 @@
     <a href="precautions.php">Precautions</a>
 </li>
 <li>
-    <a href="appointment.php">Appointment</a>
+    <a href="signup.php">Appointment</a>
 </li>
 <li>
     <a href="contact.php">Contact</a>

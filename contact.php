@@ -1,5 +1,9 @@
-<?php include "header.php";
+<?php
+include "header.php";
 include "db_connect.php";
+
+$error = '';
+$success = '';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = htmlspecialchars(trim($_POST["name"]));
@@ -9,6 +13,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($name) || empty($email) || empty($message)) {
         $error = "Please fill in all required fields.";
+    } else if (strpos($name, '#') !== false) {
+        $error = "Name cannot contain the '#' character.";
     } else {
         $stmt = $conn->prepare("INSERT INTO messages (name, email, subject, message) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("ssss", $name, $email, $subject, $message);
@@ -23,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -318,13 +325,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
 
       <div class="contact-item">
-        <p><i class="icon">📞</i> Phone: +1 200 258 2145</p>
+        <p><i class="icon">📞</i> Phone: 03412675598</p>
         <hr>
       </div>
 
       <div class="contact-item">
-        <p><i class="icon">✉️</i> Email:
-          <a href="mailto:YouCare@somemail.com">YouCare@somemail.com</a>
+        <p><i class="icon">✉️</i> Email: YouCare@somemail.com
         </p>
         <hr>
       </div>
@@ -337,7 +343,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <i class="icon">📞</i>
         </div>
         <div class="icon-text">
-          <strong>Phone :</strong> +1 200 258 2145
+          <strong>Phone :</strong> 03412675598
         </div>
       </div>
 
@@ -346,8 +352,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <i class="icon">✉️</i>
         </div>
         <div class="icon-text">
-          <strong>Email :</strong>
-          <a href="mailto:YouCare@somemail.com">YouCare@somemail.com</a>
+          <strong>Email :</strong> YouCare@somemail.com
         </div>
       </div>
 

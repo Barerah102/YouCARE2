@@ -76,7 +76,7 @@
                     <div class="content text-center style">
                         <h2 class="text-white text-bold mb-2">Best Medical Services</h2>
                         <p class="tag-text mb-5">From trusted doctors to advanced care <br> your health is in good hands.</p>
-                        <a href="appointment.php" class="btn btn-main btn-white">Take Appoinment</a>
+                        <a href="signup.php" class="btn btn-main btn-white">Take Appoinment</a>
                     </div>
                     <!-- Slide Content End -->
                 </div>
@@ -389,13 +389,13 @@
             <div class="item">
                 <div class="inner-box">
                     <div class="img_holder">
-                        <a href="service.html">
+                        <a href="service.php">
                             <img src="images/gallery/1.jpg" alt="Cardiology" class="img-responsive uniform-service-img">
                         </a>
                     </div>
                     <div class="image-content text-center">
                         <span>Expert Heart Care</span>
-                        <a href="service.html">
+                        <a href="service.php">
                             <h6>Cardiology</h6>
                         </a>
                         <p>Advanced diagnostics and personalized heart treatment from experienced cardiologists for better outcomes and care.</p>
@@ -406,13 +406,13 @@
             <div class="item">
                 <div class="inner-box">
                     <div class="img_holder">
-                        <a href="service.html">
+                        <a href="service.php">
                             <img src="images/gallery/2.jpg" alt="Orthopedics" class="img-responsive uniform-service-img">
                         </a>
                     </div>
                     <div class="image-content text-center">
                         <span>Bone & Joint Care</span>
-                        <a href="service.html">
+                        <a href="service.php">
                             <h6>Orthopedics</h6>
                         </a>
                         <p>Comprehensive treatment for bone, joint, and spine conditions to keep you moving pain-free.</p>
@@ -423,13 +423,13 @@
             <div class="item">
                 <div class="inner-box">
                     <div class="img_holder">
-                        <a href="service.html">
+                        <a href="service.php">
                             <img src="images/gallery/3.jpg" alt="Psychology" class="img-responsive uniform-service-img">
                         </a>
                     </div>
                     <div class="image-content text-center">
                         <span>Mental Health Support</span>
-                        <a href="service.html">
+                        <a href="service.php">
                             <h6>Psychology</h6>
                         </a>
                         <p>Confidential counseling and therapy sessions for emotional and mental well-being, stress management, and personal growth support..</p>
@@ -440,13 +440,13 @@
             <div class="item">
     <div class="inner-box">
         <div class="img_holder">
-            <a href="service.html">
+            <a href="service.php">
                 <img src="images/gallery/9.jpg" alt="Pediatrics" class="img-responsive uniform-service-img">
             </a>
         </div>
         <div class="image-content text-center">
             <span>Caring for Little Ones</span>
-            <a href="service.html">
+            <a href="service.php">
                 <h6>Pediatrics</h6>
             </a>
             <p>Dedicated care for infants, children, and teens to support their healthy growth and development.</p>
@@ -458,13 +458,13 @@
             <div class="item">
                 <div class="inner-box">
                     <div class="img_holder">
-                        <a href="service.html">
+                        <a href="service.php">
                             <img src="images/gallery/4.jpg" alt="X-Ray" class="img-responsive uniform-service-img">
                         </a>
                     </div>
                     <div class="image-content text-center">
                         <span>Clear Results</span>
-                        <a href="service.html">
+                        <a href="service.php">
                             <h6>X-Ray</h6>
                         </a>
                         <p>Quick and safe imaging to detect bone fractures, chest issues, and internal conditions.</p>
@@ -475,13 +475,13 @@
             <div class="item">
                 <div class="inner-box">
                     <div class="img_holder">
-                        <a href="service.html">
+                        <a href="service.php">
                             <img src="images/gallery/6.jpg" alt="General Treatment" class="img-responsive uniform-service-img">
                         </a>
                     </div>
                     <div class="image-content text-center">
                         <span>Primary Care</span>
-                        <a href="service.html">
+                        <a href="service.php">
                             <h6>General Treatment</h6>
                         </a>
                         <p>From common illnesses to seasonal care—your first step to better health starts here with trusted doctors and timely support.</p>
@@ -665,7 +665,7 @@
     <div class="row">
       
       <!-- FAQ Column -->
-      <div class="col-md-6 col-sm-12 col-xs-12">
+      <div class="col-md-6 col-sm-12 col-xs-12" id="faq">
         <div class="accordion-section">
           <div class="section-title">
             <h3>FAQ</h3>

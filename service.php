@@ -270,7 +270,7 @@ h1, h2, h3, h4, h5, h6 {
             <h1>service</h1>
             <ul class="title-menu clearfix">
                 <li>
-                    <a href="index.html">home &nbsp;/</a>
+                    <a href="index.php">home &nbsp;/</a>
                 </li>
                 <li>service</li>
             </ul>
@@ -294,7 +294,7 @@ h1, h2, h3, h4, h5, h6 {
                         <li><i class="fa fa-caret-right"></i>Stay updated with wellness tips and guides</li>
                         <li><i class="fa fa-caret-right"></i>Access resources written by medical professionals</li>
                     </ul>
-                    <a href="appointment.php" class="btn btn-style-one">Appoint</a>
+                    <a href="signup.php" class="btn btn-style-one">Appoint</a>
                 </div>
             </div>
             <div class="col-md-6">
@@ -439,7 +439,6 @@ h1, h2, h3, h4, h5, h6 {
                     </div>
                     <div class="image-content text-center">
                         <h6>General treament</h6>
-                        <a href="service.php">
                         </a>
                         <p>Treats common illnesses like flu, fever, cough
                         Provides basic health checkups and prescriptions.</p>
@@ -449,12 +448,10 @@ h1, h2, h3, h4, h5, h6 {
             <div class="item">
                 <div class="inner-box">
                     <div class="img_holder">
-                        <a href="service.html">
                             <img src="images/image6.jpg" alt="images" class="img-responsive">
                         </a>
                     </div>
                     <div class="image-content text-center">
-                        <a href="service.html">
                             <h6>Cardiologist</h6>
                         </a>
                         <p>Treats heart problems (e.g., chest pain, heart attack)
@@ -465,12 +462,10 @@ h1, h2, h3, h4, h5, h6 {
             <div class="item">
                 <div class="inner-box">
                     <div class="img_holder">
-                        <a href="images/service.html">
                             <img src="images/image7.jpg" alt="images" class="img-responsive">
                         </a>
                     </div>
                     <div class="image-content text-center">
-                        <a href="service.html">
                             <h6>Dermatologist</h6>
                         </a>
                         <p>Treats skin, hair, and nail problems
@@ -481,12 +476,10 @@ h1, h2, h3, h4, h5, h6 {
             <div class="item">
                 <div class="inner-box">
                     <div class="img_holder">
-                        <a href="service.html">
                             <img src="images/image8.jpg" alt="images" class="img-responsive">
                         </a>
                     </div>
                     <div class="image-content text-center">
-                        <a href="service.html">
                             <h6>Pediatrician</h6>
                         </a>
                         <p>Treats infants, children, and teenagers
@@ -497,12 +490,10 @@ h1, h2, h3, h4, h5, h6 {
             <div class="item">
                 <div class="inner-box">
                     <div class="img_holder">
-                        <a href="service.html">
                             <img src="images/image9.jpg" alt="images" class="img-responsive">
                         </a>
                     </div>
                     <div class="image-content text-center">
-                        <a href="service.html">
                             <h6>orthopedic</h6>
                         </a>
                         <p>Back & joint pain relief
@@ -516,12 +507,10 @@ Muscle & sports injury support.</p>
             <div class="item">
                 <div class="inner-box">
                     <div class="img_holder">
-                        <a href="service.html">
                             <img src="images/image11.jpg" alt="images" class="img-responsive">
                         </a>
                     </div>
                     <div class="image-content text-center">
-                        <a href="service.html">
                             <h6>Dentist</h6>
                         </a>
                         <p>Treats teeth and gum problems
@@ -532,12 +521,10 @@ Muscle & sports injury support.</p>
             <div class="item">
                 <div class="inner-box">
                     <div class="img_holder">
-                        <a href="service.html">
                             <img src="images/image12.jpg" alt="images" class="img-responsive">
                         </a>
                     </div>
                     <div class="image-content text-center">
-                        <a href="service.html">
                             <h6>Ophthalmologist</h6>
                         </a>
                         <p>Treats eye problems and vision issues
@@ -548,12 +535,10 @@ Muscle & sports injury support.</p>
             <div class="item">
                 <div class="inner-box">
                     <div class="img_holder">
-                        <a href="service.html">
                             <img src="images/image13.jpg" alt="images" class="img-responsive">
                         </a>
                     </div>
                     <div class="image-content text-center">
-                        <a href="service.html">
                             <h6>Pulmonologist</h6>
                         </a>
                         <p>Treats lung diseases (e.g., asthma, TB, COPD)
@@ -564,12 +549,10 @@ Muscle & sports injury support.</p>
             <div class="item">
                 <div class="inner-box">
                     <div class="img_holder">
-                        <a href="service.html">
                             <img src="images/image10.jpg" alt="images" class="img-responsive">
                         </a>
                     </div>
                     <div class="image-content text-center">
-                        <a href="service.html">
                             <h6>Neurologist</h6>
                         </a>
                         <p>Treats brain and nervous system disorders

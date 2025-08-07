@@ -232,7 +232,7 @@
           <div class="about-widget">
             <div class="footer-logo">
               <figure>
-                <a href="index.html">
+                <a href="index.php">
                   <img src="logo.png" alt="" height="50px">
                 </a>
               </figure>
@@ -254,23 +254,18 @@
                 <p>(88017) +123 4567</p>
               </li>
             </ul>
-            <ul class="list-inline social-icons">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-            </ul>
+          
           </div>
         </div>
         <!-- Services Section -->
         <div class="col-md-4 col-sm-6 col-xs-12">
           <h6>Our Services</h6>
           <ul class="menu-link">
-            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Online Appointment Booking</a></li>
-            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Telemedicine Consultation</a></li>
-            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Diagnostic Services</a></li>
-            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Specialist Referrals</a></li>
-            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i>Patient Records Management</a></li>
+            <li><a href="appointment.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Online Appointment Booking</a></li>
+            <li><a href="index.php#doctors"><i class="fa fa-angle-right" aria-hidden="true"></i>Our Doctors Specialists</a></li>
+            <li><a href="services.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Diagnostic Services</a></li>
+             <li><a href="contact.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Message Us</a></li>
+            <li><a href="../youcare-admin/html/ltr/manage-patients.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Patient Records Management</a></li>
           </ul>
         </div>
         <!-- Recent Posts Section -->
@@ -281,10 +276,10 @@
               <li class="item">
                 <div class="media">
                   <div class="media-left">
-                    <a href="#"><img class="media-object" src="images/image1.jpg" alt="post-thumb"></a>
+                    <a href="service.php"><img class="media-object" src="images/image1.jpg" alt="post-thumb"></a>
                   </div>
                   <div class="media-body">
-                    <h4 class="media-heading"><a href="#">Benefits of Early Diagnosis</a></h4>
+                    <h4 class="media-heading"><a href="service.php">Benefits of Early Diagnosis</a></h4>
                     <p>Early detection can improve treatment outcomes significantly.</p>
                   </div>
                 </div>
@@ -292,10 +287,10 @@
               <li class="item">
                 <div class="media">
                   <div class="media-left">
-                    <a href="#"><img class="media-object" src="images/image2.jpg" alt="post-thumb"></a>
+                    <a href="appointment.php"><img class="media-object" src="images/image2.jpg" alt="post-thumb"></a>
                   </div>
                   <div class="media-body">
-                    <h4 class="media-heading"><a href="#">Using Our Booking App</a></h4>
+                    <h4 class="media-heading"><a href="appointment.php">Using Our Booking App</a></h4>
                     <p>A step-by-step guide to scheduling your appointment online.</p>
                   </div>
                 </div>
@@ -314,9 +309,9 @@
         <p>&copy; 2025 Medical Appointment Booking System — All Rights Reserved by <a href="#">CARE Group</a></p>
       </div>
       <ul class="footer-bottom-link">
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Terms & Conditions</a></li>
-        <li><a href="#">FAQ</a></li>
+        <li><a>Privacy Policy</a></li>
+        <li><a>Terms & Conditions</a></li>
+        <li><a href="index.php#faq">FAQ</a></li>
       </ul>
     </div>
   </div>

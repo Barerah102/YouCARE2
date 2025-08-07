@@ -14,6 +14,24 @@ if (isset($_POST['submitbtn'])) {
         echo "<script>alert('Please fill in all required fields.'); window.history.back();</script>";
         exit;
     }
+    // Validate name (only letters and spaces, 2–50 characters)
+if (!preg_match("/^[A-Za-z\s]{2,50}$/", $full_name)) {
+    echo "<script>alert('Full Name should contain only letters and spaces (2-50 characters).'); window.history.back();</script>";
+    exit;
+}
+
+// Validate email format
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    echo "<script>alert('Invalid email format.'); window.history.back();</script>";
+    exit;
+}
+
+// Validate phone (digits only, 10–15 digits)
+if (!preg_match("/^\d{10,15}$/", $phone)) {
+    echo "<script>alert('Phone number should be 10 to 15 digits.'); window.history.back();</script>";
+    exit;
+}
+
 
     // 1. Check if patient exists
     $patient_id = 0;

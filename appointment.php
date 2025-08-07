@@ -1,4 +1,9 @@
-<?php include("header.php"); ?>
+<?php
+include 'auth-check.php'; // run auth check FIRST, before any HTML or header
+include 'header.php';     // now safe to include header
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -39,7 +44,7 @@
             <h1>appointment</h1>
             <ul class="title-menu clearfix">
                 <li>
-                    <a href="index.html">home &nbsp;/</a>
+                    <a href="index.php">home &nbsp;/</a>
                 </li>
                 <li>appointment</li>
             </ul>
@@ -59,25 +64,30 @@
           <div class="section-title">
             <h3>Request <span>Appointment</span></h3>
           </div>
+          <div style="background-color: #e6f4ea; border-left: 5px solid #28a745; padding: 10px 15px; margin-bottom: 15px; font-size: 14px;">
+  <strong>🔔 YouCare currently has branches in:</strong> Los Angeles, Miami,<br> New York, Seattle, and Washington.
+</div>
+
           <form name="contact_form" class="default-form contact-form" action="submit_appointment.php" method="POST">
             <div class="row">
 
               <!-- 👤 Patient Info -->
               <div class="col-md-6 col-sm-12 col-xs-12">
                 <div class="form-group">
-                  <input type="text" name="patient_name" placeholder="Full Name" required>
+                <input type="text" name="patient_name" placeholder="Full Name" required pattern="^[A-Za-z][A-Za-z\s]{1,49}$" title="Must start with a letter, only letters and spaces allowed, 2-50 characters.">
                 </div>
                 <div class="form-group">
-                  <input type="email" name="email" placeholder="Email" required>
+                <input type="email" name="email" placeholder="Email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Enter a valid email (e.g., example@mail.com)">
                 </div>
                 <div class="form-group">
-                  <input type="tel" name="phone" placeholder="Phone" required pattern="[0-9]{10,15}">
+                <input type="tel" name="phone" placeholder="Phone" required pattern="^\d{10,15}$" title="Enter 10 to 15 digit phone number">
                 </div>
               </div>
               
 
                 <!-- 🌆 City Dropdown -->
                 <div class="form-group">
+                  
                   <select name="city" id="citySelect" required>
                     <option value="">Select City</option>
                     <?php
@@ -228,6 +238,39 @@ document.getElementById("doctorSelect").addEventListener("change", function() {
     xhr.send("doctor_id=" + doctorId);
 });
 </script>
+<!-- Your form HTML here -->
+
+<script>
+document.querySelector("form[name='contact_form']").addEventListener("submit", function (e) {
+    const name = this.patient_name.value.trim();
+    const email = this.email.value.trim();
+    const phone = this.phone.value.trim();
+
+    const nameRegex = /^[A-Za-z][A-Za-z\s]{1,49}$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const phoneRegex = /^\d{10,15}$/;
+
+    let errors = [];
+
+    if (!nameRegex.test(name)) {
+        errors.push("Name must start with a letter, only letters and spaces allowed (2–50 characters).");
+    }
+
+    if (!emailRegex.test(email)) {
+        errors.push("Enter a valid email (e.g., example@mail.com).");
+    }
+
+    if (!phoneRegex.test(phone)) {
+        errors.push("Phone number must be 10 to 15 digits.");
+    }
+
+    if (errors.length > 0) {
+        alert(errors.join("\n"));
+        e.preventDefault(); // prevent form submission
+    }
+});
+</script>
+
 
 <!--End pagewrapper-->
 
