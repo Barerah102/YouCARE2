@@ -118,7 +118,7 @@ if (isset($_POST['signup'])) {
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
     $confirm = trim($_POST['confirm_password']);
-    $role = $_POST['role']; // use selected role
+    $role = 'patient';
 
     // Validation
 if (!preg_match("/^[A-Za-z0-9_ ]{3,20}$/", $username)) {
@@ -133,11 +133,6 @@ if (!preg_match("/^[A-Za-z0-9_ ]{3,20}$/", $username)) {
 
     if ($password !== $confirm) {
         echo "<script>alert('Passwords do not match.'); window.history.back();</script>";
-        exit;
-    }
-
-    if ($role !== 'patient' && $role !== 'doctor') {
-        echo "<script>alert('Invalid role selected.'); window.history.back();</script>";
         exit;
     }
 
@@ -159,9 +154,7 @@ if (!preg_match("/^[A-Za-z0-9_ ]{3,20}$/", $username)) {
 
         if ($role === 'patient') {
             header("Location: appointment.php");
-        } elseif ($role === 'doctor') {
-            header("Location: ../youcare-admin/html/ltr/appointments.php");
-        }
+        } 
         exit;
     } else {
         echo "<script>alert('Signup failed. Try again.'); window.history.back();</script>";
@@ -184,11 +177,7 @@ if (!preg_match("/^[A-Za-z0-9_ ]{3,20}$/", $username)) {
   <input type="password" name="password" id="password" placeholder="Password" required><br>
   <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required><br>
 
-  <select name="role" id="role" required>
-    <option value="">Select Role</option>
-    <option value="patient">Patient</option>
-    <option value="doctor">Doctor</option>
-  </select><br>
+  
 
   <button type="submit" name="signup">Sign Up</button>
 </form>

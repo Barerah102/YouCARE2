@@ -136,9 +136,7 @@ if (isset($_POST['login'])) {
 
         if ($user['role'] === 'admin') {
             echo "window.location.href = '../youcare-admin/html/ltr/index.php';";
-        } elseif ($user['role'] === 'doctor') {
-            echo "window.location.href = '../youcare-admin/html/ltr/appointments.php';";
-        } elseif ($user['role'] === 'patient') {
+        }elseif ($user['role'] === 'patient') {
             echo "window.location.href = 'appointment.php';";
         } else {
             echo "alert('Unknown role.');";
