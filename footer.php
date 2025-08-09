@@ -265,7 +265,6 @@
             <li><a href="index.php#doctors"><i class="fa fa-angle-right" aria-hidden="true"></i>Our Doctors Specialists</a></li>
             <li><a href="services.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Diagnostic Services</a></li>
              <li><a href="contact.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Message Us</a></li>
-            <li><a href="../youcare-admin/html/ltr/manage-patients.php"><i class="fa fa-angle-right" aria-hidden="true"></i>Patient Records Management</a></li>
           </ul>
         </div>
         <!-- Recent Posts Section -->
@@ -306,7 +305,7 @@
   <div class="footer-bottom">
     <div class="container clearfix">
       <div class="copyright-text">
-        <p>&copy; 2025 Medical Appointment Booking System — All Rights Reserved by <a href="#">CARE Group</a></p>
+        <p>&copy; All Rights Reserved by YouCare Admin. <a href="#">CARE Group</a></p>
       </div>
       <ul class="footer-bottom-link">
         <li><a>Privacy Policy</a></li>

@@ -739,21 +739,21 @@
                       <i class="fa fa-map-o"></i>
                       <div class="media-body">
                         <h3>Location</h3>
-                        <p>PO Box 16122 Collins Street West<br>Victoria 8007 Canada</p>
+                        <p><a href="branches.php">View All Branches Locations</a></p>
                       </div>
                     </div>
                     <div class="media">
                       <i class="fa fa-phone"></i>
                       <div class="media-body">
                         <h3>Phone</h3>
-                        <p>(+48) 564-334-21-22-34<br>(+48) 564-334-21-22-38</p>
+                        <p>(202) 555-0104<br>(305) 555-0101</p>
                       </div>
                     </div>
                     <div class="media">
                       <i class="fa fa-envelope-o"></i>
                       <div class="media-body">
                         <h3>Email</h3>
-                        <p>info@templatepath.com<br>info@cleanxer.com</p>
+                        <p>YouCare12@Gmail.com<br>info@cleanxer.com</p>
                       </div>
                     </div>
                   </div>

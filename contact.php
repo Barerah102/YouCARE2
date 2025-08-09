@@ -11,11 +11,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $subject = htmlspecialchars(trim($_POST["subject"]));
     $message = htmlspecialchars(trim($_POST["message"]));
 
+    // VALIDATION STARTS HERE
     if (empty($name) || empty($email) || empty($message)) {
         $error = "Please fill in all required fields.";
+    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error = "Please enter a valid email address.";
+    } else if (strlen($name) < 3) {
+        $error = "Name must be at least 3 characters long.";
     } else if (strpos($name, '#') !== false) {
         $error = "Name cannot contain the '#' character.";
-    } else {
+    } else if (strlen($message) < 10) {
+        $error = "Message must be at least 10 characters long.";
+    }
+    // VALIDATION ENDS HERE
+
+    // Only insert if no errors
+    if (empty($error)) {
         $stmt = $conn->prepare("INSERT INTO messages (name, email, subject, message) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("ssss", $name, $email, $subject, $message);
 
@@ -28,6 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->close();
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -320,7 +332,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       <h3>Contact Info</h3>
 
       <div class="contact-item">
-        <p><i class="icon">📍</i> No: 58 A, East Madison St Baltimore, MD, USA</p>
+        <p><i class="icon">📍</i> <a href="branches.php">View All Branches Locations</a></p>
         <hr>
       </div>
 
@@ -330,7 +342,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
 
       <div class="contact-item">
-        <p><i class="icon">✉️</i> Email: YouCare@somemail.com
+        <p><i class="icon">✉️</i> Email: YouCare12@Gmail.com
         </p>
         <hr>
       </div>
