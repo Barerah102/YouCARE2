@@ -38,7 +38,7 @@ include 'header.php';     // now safe to include header
     <!-- <div class="preloader"></div> -->
     <!-- Preloader -->
 <!--Page Title-->
-<section class="page-title text-center" style="background-image:url(images/background/3.jpg);">
+<section class="page-title text-center" style="background-image:url(images/IMAGE8.JPG);">
     <div class="container">
         <div class="title-text">
             <h1>appointment</h1>
