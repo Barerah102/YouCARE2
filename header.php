@@ -50,6 +50,7 @@
     margin-left: 15px;
   }
 }
+
 </style>
 
 <head>
@@ -111,14 +112,14 @@
     <a href="about.php">About</a>
 </li>
 <li>
-    <a href="index.php#doctors">Doctors</a>
-</li>
-<li>
     <a href="precautions.php">Precautions</a>
 </li>
 <li>
     <a href="signup.php">Appointment</a>
 </li>
+<li>
+        <a href="view_appointment.php">View Appointments</a>
+    </li>
 <li>
     <a href="contact.php">Contact</a>
 </li>
