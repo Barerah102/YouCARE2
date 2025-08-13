@@ -47,27 +47,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
   <meta charset="UTF-8">
   <title>Contact Us - YouCare</title>
+  
   <style>
     * {
       box-sizing: border-box;
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fff;
-      color: #333;
-    }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
     .container {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: 50px auto;
-      padding: 20px;
-      gap: 40px;
-    }
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
     .contact-form {
       flex: 2;
@@ -272,12 +271,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 .title-menu a:hover {
   text-decoration: none;
 }
+main {
+  flex: 1; /* Pushes footer to bottom */
+}
+
 
 
   </style>
 </head>
 <body>
-
+<main>
 <section class="page-title text-center" style="background-image: url('images/image5.jpg'); margin-bottom: 40px;">
     <div class="container">
         <div class="title-text">
@@ -326,6 +329,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <button type="submit" class="send-btn">SEND</button>
       </form>
     </div>
+    <br><br><br>
 
     <!-- Contact Info -->
     <div class="contact-info">
@@ -347,8 +351,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <hr>
       </div>
 
-      <h3 style="margin-top: 30px;">APPOINTMENT</h3>
-      <p>Fox that is her thing smaoasa lase lemedds laasd pamade eleifend sapien. Lase lemedds laasd pamade eleifend sapien.</p>
+      <h3 style="margin-top: 30px;">Get in Touch</h3>
+      <p>We’d love to hear from you! You can Reach out by phone, email, or our message form.</p>
 
       <div class="icon-box">
         <div class="icon-square">
@@ -379,7 +383,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       </div>
     </div>
   </div>
+  <br><br>
+  </main>
 
-<?php include "footer.php" ?>
+<?php include "footer.php"; ?>
 </body>
 </html>

@@ -143,10 +143,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .item {
   width: 340px;
-  border: 5px solid #eee;
   border-radius: 8px;
   overflow: hidden;
-  background: #fff;
   transition: box-shadow 0.3s, transform 0.3s ease; /* Added transform */
 }
 
@@ -469,7 +467,7 @@ h1, h2, h3, h4, h5, h6 {
                             <h6>Dermatologist</h6>
                         </a>
                         <p>Treats skin, hair, and nail problems
-                        Handles acne, eczema, rashes, and skin allergies</p>
+                        Handles acne, eczema, rashes, and skin allergies and more</p>
                     </div>
                 </div>
             </div>
@@ -483,7 +481,7 @@ h1, h2, h3, h4, h5, h6 {
                             <h6>Pediatrician</h6>
                         </a>
                         <p>Treats infants, children, and teenagers
-                         Manages vaccinations and child growth</p>
+                         Manages vaccinations and child growth with so much care and love</p>
                     </div>
                 </div>
             </div>
@@ -514,7 +512,7 @@ Muscle & sports injury support.</p>
                             <h6>Dentist</h6>
                         </a>
                         <p>Treats teeth and gum problems
-                         Performs cleaning, fillings, and root canals</p>
+                         Performs cleaning, fillings, and root canals all the work related to dental</p>
                     </div>
                 </div>
             </div>
@@ -528,7 +526,7 @@ Muscle & sports injury support.</p>
                             <h6>Ophthalmologist</h6>
                         </a>
                         <p>Treats eye problems and vision issues
-                         Performs eye surgery if needed</p>
+                         Performs eye surgery if needed we love to help you!</p>
                     </div>
                 </div>
             </div>
@@ -542,7 +540,7 @@ Muscle & sports injury support.</p>
                             <h6>Pulmonologist</h6>
                         </a>
                         <p>Treats lung diseases (e.g., asthma, TB, COPD)
-                           Conducts breathing tests</p>
+                           Conducts breathing tests take appointment if needed</p>
                     </div>
                 </div>
             </div>
@@ -556,7 +554,7 @@ Muscle & sports injury support.</p>
                             <h6>Neurologist</h6>
                         </a>
                         <p>Treats brain and nervous system disorders
-                           Deals with epilepsy, stroke, headaches</p>
+                           Deals with epilepsy, stroke, headaches. love to help you</p>
                     </div>
                 </div>
             </div>
@@ -590,7 +588,7 @@ Muscle & sports injury support.</p>
 <script src="plugins/jquery-ui.js"></script>
 <script src="plugins/timePicker.js"></script>
 <script src="js/script.js"></script>
-<?php include "footer.php"?>
+<?php include "footer.php";?>
 
 </body>
 
