@@ -27,9 +27,8 @@
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
+  
 </head>
-
-
 <body>
 <!--=================================
 =            Page Slider            =
