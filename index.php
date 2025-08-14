@@ -13,6 +13,11 @@
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- SEO meta tags -->
+   <meta name="description" content="YouCare is your trusted medical and health care partner, offering reliable healthcare services, expert doctors, and patient-focused care.">
+   <meta name="keywords" content="YouCare, medical services, healthcare, doctors, patients, appointments, medical care, health clinic">
+   <meta name="author" content="YouCare Team">
   
   <!-- Slick Carousel -->
   <link rel="stylesheet" href="plugins/slick/slick.css">
