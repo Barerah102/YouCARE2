@@ -5,7 +5,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Medic | Medical HTML Template</title>
+  <title>About Us | YouCare Medical Services</title>
 
   
   <!-- mobile responsive meta -->

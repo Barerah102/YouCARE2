@@ -9,7 +9,7 @@ include 'header.php';     // now safe to include header
 
 <head>
   <meta charset="utf-8">
-  <title>Medic | Medical HTML Template</title>
+  <title>YouCare | Book an Appointment</title>
 
   
   <!-- mobile responsive meta -->

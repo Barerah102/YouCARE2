@@ -7,7 +7,7 @@
 
 
   <meta charset="utf-8">
-  <title>Medic | Medical HTML Template</title>
+  <title>YouCare | Your Trusted Medical & Health Care Partner</title>
 
   
   <!-- mobile responsive meta -->
