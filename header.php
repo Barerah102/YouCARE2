@@ -55,7 +55,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>YouCARE | Header</title>
+  <title>YouCare | Your Trusted Medical & Health Care Partner</title>
 
   
   <!-- mobile responsive meta -->
